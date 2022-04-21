@@ -15,6 +15,7 @@
 		7BAE525E280E88A800F70D63 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BAE525C280E88A800F70D63 /* LaunchScreen.storyboard */; };
 		7BAE5266280E908400F70D63 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE5265280E908400F70D63 /* DetailViewController.swift */; };
 		7BAE5268280E94B900F70D63 /* ItunesQueryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE5267280E94B900F70D63 /* ItunesQueryService.swift */; };
+		7BAE526A280EDD3600F70D63 /* MusicListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAE5269280EDD3600F70D63 /* MusicListTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7BAE525F280E88A800F70D63 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BAE5265280E908400F70D63 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7BAE5267280E94B900F70D63 /* ItunesQueryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesQueryService.swift; sourceTree = "<group>"; };
+		7BAE5269280EDD3600F70D63 /* MusicListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicListTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				7BAE5253280E88A600F70D63 /* SceneDelegate.swift */,
 				7BAE5255280E88A600F70D63 /* ViewController.swift */,
 				7BAE5265280E908400F70D63 /* DetailViewController.swift */,
+				7BAE5269280EDD3600F70D63 /* MusicListTableViewCell.swift */,
 				7BAE5267280E94B900F70D63 /* ItunesQueryService.swift */,
 				7BAE5257280E88A600F70D63 /* Main.storyboard */,
 				7BAE525A280E88A800F70D63 /* Assets.xcassets */,
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BAE5256280E88A600F70D63 /* ViewController.swift in Sources */,
+				7BAE526A280EDD3600F70D63 /* MusicListTableViewCell.swift in Sources */,
 				7BAE5252280E88A600F70D63 /* AppDelegate.swift in Sources */,
 				7BAE5254280E88A600F70D63 /* SceneDelegate.swift in Sources */,
 				7BAE5266280E908400F70D63 /* DetailViewController.swift in Sources */,
