@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
         nameLabel.text = detail?.name
         artistLabel.text = detail?.artist
         urlLabel.text = detail?.collectionViewURL.absoluteString
-
         let url = detail?.artworkURL
         imageView.downloaded(from: url!)
     }
@@ -39,13 +38,9 @@ extension UIImageView {
                   let data = data, error == nil,
                   let image = UIImage(data: data)
                   else { return }
-              DispatchQueue.main.async() { [weak self] in
+              DispatchQueue.main.asyncAfter(deadline: .now() + 1)  { [weak self] in
                   self?.image = image
               }
           }.resume()
       }
-//      func downloaded(from link: String, contentMode mode: ContentMode = .scaleAspectFit) {
-//          guard let url = URL(string: link) else { return }
-//          downloaded(from: url, contentMode: mode)
-//      }
   }
