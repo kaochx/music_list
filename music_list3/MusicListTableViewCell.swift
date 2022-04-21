@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class cell: UITableViewCell {
 
     let identifier = "MusicListTableViewCell"
@@ -16,7 +15,6 @@ class cell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-    
     
     override func layoutSubviews() {
         super.layoutSubviews()
