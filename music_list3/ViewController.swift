@@ -12,15 +12,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var contentView: UIView!
     
-    var apiService: ItunesQueryService = {
-        let api = ItunesQueryService()
-        return api
-    }()
+    private var apiService: ItunesQueryService = ItunesQueryService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
+        apiService.tracksUpdate = {
+            self.tableView.delegate = self
+            self.tableView.dataSource = self
+            self.tableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -32,11 +32,11 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell: cell = cell(style: UITableViewCell.CellStyle.subtitle, reuseIdentifier: nil)
         cell.textLabel?.text = apiService.tracks[indexPath.row].name
         cell.detailTextLabel?.text = apiService.tracks[indexPath.row].artist
-        
         //cell.imageView?.downloaded(from: apiService.tracks[indexPath.row].artworkURL)
         if let data = NSData(contentsOf: apiService.tracks[indexPath.row].artworkURL){
             cell.imageView?.image = UIImage(data: data as Data, scale: 12)
         }
+        
         return cell
     }
     
@@ -55,7 +55,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 140
+        return view.frame.height / 6
     }
     
 }
